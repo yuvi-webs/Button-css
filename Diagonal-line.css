@@ -1,0 +1,51 @@
+/*Diagonal-line.css*/
+/* Please change background color & Edit Elementor Settings: */
+/*כאשר ככה נראה בהתחלה, צריך לשנות את ההגדרות באלמנטור + בקוד CSS עצמו-*/
+/*תוכן- יישור למרכז*/
+/*סגנון- צבע טקסט*/
+/*צבע רקע- להגדיר שקוף*/
+/*עיטור- ללא*/
+/*+הגדרות מעבר עכבר*/
+
+
+
+selector {
+  background: #E4F1F4;
+  border: none;
+  padding: 0px 0px;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  width: 120px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+span {
+  display: inline-block;
+  transform: skew(10deg);
+}
+
+selector::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 100%;
+  left: 0;
+  background: rgb(20, 20, 20);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+selector:hover {
+  color: #000000;
+}
+
+selector:hover::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
